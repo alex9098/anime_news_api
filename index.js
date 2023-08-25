@@ -29,10 +29,7 @@ async function webscrapper(res,cat) {
         const responce = await axios.get(url)
         const html = responce.data
         const $ = cheerio.load(html)
-<<<<<<< HEAD
-=======
-   
->>>>>>> a7d41df1da932cb8b897e1c083d35a57da38b441
+
         $(".display-card.article.small", html).each(function(){
           const image =  $(this).find('source').attr("srcset")
           const heading = $(this).find("h5").text().replace(/\s\s+/g, '')
@@ -43,10 +40,6 @@ async function webscrapper(res,cat) {
 
         })
 
-<<<<<<< HEAD
-=======
-        
->>>>>>> a7d41df1da932cb8b897e1c083d35a57da38b441
         res.json(news)
     } catch (error) {
         console.log(error)
