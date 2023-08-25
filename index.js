@@ -5,10 +5,11 @@ const cors = require("cors")
 const app = express()
 app.use(cors({origin:"*"}))
 const PORT = process.env.PORT || 3000
-let news = []
+
 async function webscrapper(res,cat) {
     try {
-        let url
+        let news = []
+        let url;
         switch(cat) {
             case "anime":
               url = `https://www.cbr.com/category/anime-news/`
