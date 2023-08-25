@@ -1,9 +1,9 @@
 const express = require('express')
 const cheerio = require('cheerio')
 const axios = require('axios')
-
+const cors = require("cors")
 const app = express()
-
+app.use(cors({origin:"*"}))
 const PORT = process.env.PORT || 3000
 let news = []
 async function webscrapper(res,cat) {
