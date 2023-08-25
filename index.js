@@ -46,7 +46,7 @@ async function webscrapper(res,cat) {
     }
     
 }
-webscrapper()
+
 app.get('/anime', async (req,res)=>{
     webscrapper(res,"anime")
 })
