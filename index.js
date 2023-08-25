@@ -47,19 +47,19 @@ async function webscrapper(res,cat) {
     
 }
 
-app.get('/anime', async (req,res)=>{
+app.get('/anime', (req,res)=>{
     webscrapper(res,"anime")
 })
-app.get('/movie', async (req,res)=>{
+app.get('/movie',  (req,res)=>{
     webscrapper(res,"movie")
 })
-app.get('/comic', async (req,res)=>{
+app.get('/comic', (req,res)=>{
     webscrapper(res,"comic")
 })
-app.get('/series', async (req,res)=>{
+app.get('/series', (req,res)=>{
     webscrapper(res,"series")
 })
-app.get('/games', async (req,res)=>{
+app.get('/games', (req,res)=>{
     webscrapper(res,"games")
 })
 
